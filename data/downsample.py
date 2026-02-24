@@ -1,7 +1,6 @@
 import librosa
 import os
 from os.path import join
-import tensorflow as tf
 from tqdm import tqdm
 import numpy as np
 from scipy.io import wavfile
@@ -38,4 +37,3 @@ print('start downsampling .wav, {} files found...'.format(len(files)))
 for i in tqdm(range(len(files))):
     f = files[i]
     downsample_wavfile(join(AUDIO_DIR, f+'.wav'), join(OUTPUT_DIR, f+'.wav'), IN_SR, OUT_SR)  
-
